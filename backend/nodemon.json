@@ -1,0 +1,8 @@
+{
+  "env": {
+    "MONGO_USER": "PrestoResto",
+    "MONGO_PASSWORD": "PrestoResto",
+    "MONGO_DATABASE": "myFirstDatabase",
+    "SENDGRID_KEY": "YOUR_SENDGRID_API_KEY"
+  }
+}
