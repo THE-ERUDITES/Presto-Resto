@@ -11,8 +11,8 @@ const Seller = require("../models/seller");
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "erudite.onlinevoting@gmail.com",
-    pass: "eruditeproject",
+    user: GMAILID,
+    pass: PASSWORD,
   },
 });
 
@@ -67,7 +67,7 @@ exports.signupUser = (req, res, next) => {
 .then((savedUser) => {
   transporter.sendMail({
     to: email,
-    from: "erudite.onlinevoting@gmail.com",
+    from: GMAILID,
     subject: "Verify your Account on Presto Resto",
     html: `
                   <p>Please verify your email by clicking on the link below - Presto Resto</p>
@@ -241,7 +241,7 @@ exports.signupSeller = (req, res, next) => {
     .then((savedSeller) => {
       transporter.sendMail({
         to: email,
-        from: "erudite.onlinevoting@gmail.com",
+        from: GMAILID,
         subject: "Verify your Account on Presto Resto",
         html: `
                       <p>Please verify your email by clicking on the link below - Presto Resto</p>

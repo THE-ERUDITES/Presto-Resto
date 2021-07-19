@@ -13,8 +13,8 @@ const app = require("../app");
 const transporter = nodemailer.createTransport({
   service: "Gmail",
   auth: {
-    user: "erudite.onlinevoting@gmail.com",
-    pass: "eruditeproject",
+    user: GMAILID,
+    pass: PASSWORD,
   },
 });
 //////////////////////////////////////////////////
@@ -303,7 +303,7 @@ exports.postOrder = (req, res, next) => {
           console.log(seller.email);
             transporter.sendMail({
               to: seller.email,
-              from: "erudite.onlinevoting@gmail.com",
+              from: GMAILID,
               subject: "Yaaay! New Order!!",
               html: `<p>There is a new order lined up for you! Please log in into our website to accept or cancel the order.</p>`,
             }).catch(err => console.log(err));

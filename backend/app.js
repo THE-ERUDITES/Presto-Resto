@@ -73,7 +73,7 @@ const clients = {};
 
 mongoose
   .connect(
-    `mongodb+srv://PrestoResto:PrestoResto@cluster0.qug93.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{ useNewUrlParser: true, useCreateIndex: true , useUnifiedTopology: true  }
+    MONGO_DB_URI,{ useNewUrlParser: true, useCreateIndex: true , useUnifiedTopology: true  }
   )
   .then((result) => {
     console.log("Connected to db");
